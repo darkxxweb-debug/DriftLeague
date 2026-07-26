@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DriftLeague · Top Players</title>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <div class="shell">
+    <div class="brand">
+      <a href="/" class="brand-mark" style="text-decoration:none;"><i class="fa-solid fa-arrow-left"></i></a>
+      <div class="brand-name">Top <span>Players</span></div>
+    </div>
+
+    <p class="page-sub">Ranks: Bronze &rarr; Platinum &rarr; Diamond &rarr; Gold &rarr; Dominator</p>
+
+    <div id="lbList"></div>
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <div class="glyph"><i class="fa-solid fa-trophy"></i></div>
+      <div>No races finished yet. Be the first champion.</div>
+    </div>
+  </div>
+
+  <script src="/js/leaderboard.js"></script>
+</body>
+</html>

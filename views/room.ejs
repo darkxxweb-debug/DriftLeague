@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DriftLeague · Room</title>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <div class="shell">
+    <div class="brand">
+      <div class="brand-mark"><i class="fa-solid fa-flag-checkered"></i></div>
+      <div class="brand-name">Drift<span>League</span></div>
+    </div>
 
+    <h1 class="page-title" id="roomName">Loading room...</h1>
+    <p class="page-sub">Share the link below so friends can join instantly.</p>
+
+    <div class="invite-box">
+      <input type="text" id="inviteLink" readonly>
+      <button class="btn btn-ghost" id="copyBtn" style="width:auto; padding:8px 14px;">
+        <i class="fa-solid fa-copy"></i>
+      </button>
+    </div>
+
+    <div class="card">
+      <div id="memberList"></div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-ghost" id="readyBtn">
+        <i class="fa-solid fa-check"></i> I'm ready
+      </button>
+      <button class="btn btn-primary" id="startBtn" style="display:none;">
+        <i class="fa-solid fa-flag-checkered"></i> Start race
+      </button>
+    </div>
+
+    <div class="status-msg" id="statusMsg"></div>
+  </div>
+
+  <div class="countdown-overlay" id="countdownOverlay" style="display:none; position:fixed;"></div>
+
+  <script>
+    window.ROOM_CODE = "<%= code %>";
+  </script>
+  <script src="/js/room.js"></script>
+</body>
+</html>

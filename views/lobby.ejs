@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DriftLeague · Multiplayer Racing</title>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <div class="shell">
+    <div class="brand">
+      <div class="brand-mark"><i class="fa-solid fa-flag-checkered"></i></div>
+      <div class="brand-name">Drift<span>League</span></div>
+    </div>
+
+    <h1 class="page-title">Race your friends</h1>
+    <p class="page-sub">Pick a name and car color, then create a room or join one with a link.</p>
+
+    <div class="card">
+      <div class="field">
+        <label for="username">Driver name</label>
+        <input type="text" id="username" placeholder="e.g. NightRider" maxlength="18">
+      </div>
+
+      <div class="field">
+        <label>Car color</label>
+        <div class="color-grid" id="colorGrid"></div>
+      </div>
+
+      <button class="btn btn-primary" id="createBtn">
+        <i class="fa-solid fa-plus"></i> Create room
+      </button>
+
+      <div class="divider">or join with a code</div>
+
+      <div class="field" style="margin-bottom:12px;">
+        <input type="text" id="joinCode" placeholder="ROOM CODE" maxlength="6" style="text-transform:uppercase; letter-spacing:0.15em; text-align:center;">
+      </div>
+      <button class="btn btn-magenta" id="joinBtn">
+        <i class="fa-solid fa-right-to-bracket"></i> Join room
+      </button>
+
+      <div class="status-msg" id="statusMsg"></div>
+    </div>
+
+    <a href="/leaderboard" class="btn btn-ghost">
+      <i class="fa-solid fa-trophy"></i> Top players
+    </a>
+  </div>
+
+  <script src="/js/lobby.js"></script>
+</body>
+</html>
