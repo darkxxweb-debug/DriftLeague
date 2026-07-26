@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: driftleague
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: PORT
+        value: 10000
